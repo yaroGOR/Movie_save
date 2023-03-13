@@ -3,8 +3,10 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="en">
+              <title>MovieLib</title>
+              <meta name="description" content="Save your favourite movie in one place" />
+
       {/* <Head>
-        <title>MovieLib</title>
         <meta name="description" content="Save your favourite movie in one place" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

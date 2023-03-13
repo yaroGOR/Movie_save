@@ -8,6 +8,7 @@ import { Tab } from '@headlessui/react'
 import type {
   GetServerSidePropsContext,
 } from "next";
+import Head from 'next/head';
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
@@ -31,6 +32,12 @@ const Movie = ({ data }: any) => {
   const { title }: any = router.query
   
   return (
+    <>
+    <Head>
+     <title> {title}</title>
+
+    </Head>
+  
     <div className='h-screen text-gray-600 body-font overflow-hidden'>
      
 
@@ -132,7 +139,7 @@ const Movie = ({ data }: any) => {
         </div>
       </div>
     </div>
-
+    </>
   )
 }
 

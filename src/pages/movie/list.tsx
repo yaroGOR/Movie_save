@@ -4,6 +4,7 @@ import { loadState } from '../../components/redux/localStorage';
 import Poster from '../../components/atoms/Poster';
 import { useStore } from 'react-redux';
 import MovieCard from '../../components/molecules/MovieCard';
+import Head from 'next/head';
 
 
 const list = () => {
@@ -16,6 +17,11 @@ const list = () => {
     setDomLoaded(true)
   }, [])
   return (
+    <>
+     <Head>
+     <title>Your Movies</title>
+
+    </Head>
     <div className='flex gap-10 flex-wrap justify-center'>
       {domLoaded && savedMovies?.movies?.movies.map((movie: any) => {
         return (
@@ -28,6 +34,7 @@ const list = () => {
       }
 
     </div>
+    </>
   )
 }
 
