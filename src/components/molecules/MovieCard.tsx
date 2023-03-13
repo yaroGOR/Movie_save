@@ -35,7 +35,7 @@ const isInStorage = (movie: IMovie) => {
 
 const MovieCard = ({ data }: IMovieCardProps) => {
     const dispatch = useDispatch()
-console.log(data)
+    console.log(data)
     const [saved, setSaved] = useState(isInStorage(data))
     const handleSave = (movie:IMovie) => {
         setSaved(!saved)
