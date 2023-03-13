@@ -8,7 +8,7 @@ interface IPagination {
 const Pagination = ({ items = 0, currentPage, pageSize, onPageChange }: IPagination) => {
     const pagesCount = Math.ceil(items / pageSize);
 
-    if (pagesCount == 1 || Number.isNaN(pagesCount)) return null;
+    if (pagesCount < 1 || Number.isNaN(pagesCount)) return null;
     const pages = Array.from({ length: pagesCount }, (_, i) => i + 1)
 
 
@@ -23,7 +23,6 @@ const Pagination = ({ items = 0, currentPage, pageSize, onPageChange }: IPaginat
             pageRangeDisplayed={5}
             pageCount={pages.length}
             previousLabel="< previous"
-            renderOnZeroPageCount={null}
             containerClassName={""}
             pageClassName={"relative block rounded bg-white-500 py-1.5 px-3 text-sm font-medium text-primary-700"}
             previousLinkClassName={""}

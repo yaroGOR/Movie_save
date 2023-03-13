@@ -6,7 +6,7 @@ interface IPoster {
     src: string
 
 }
-const Poster = ({ width = 400, height = 400, src }: IPoster) => {
+const Poster = ({ width = 400, height = 400, src }:any) => {
     if (src == 'N/A') {
         src = '/noimage.jpg'
     }
