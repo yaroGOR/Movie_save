@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+для запуску у корні створити .env з полем APY_KEY = 45e5cd9e та заупустити командою
+>npm run dev
 
 First, run the development server:
 
